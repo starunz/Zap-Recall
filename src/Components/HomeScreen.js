@@ -1,11 +1,17 @@
 import styled from "styled-components";
+import { useState } from "react";
+
+import Topbar from "./Topbar";
 
 
 export default function HomeScreen() {
+    const [start, setStart] = useState(false);
+
     return (
+        start ? <Topbar /> : 
         <Container>
             <img src="./assets/logo.png" alt="logo"/>
-            <Start> 
+            <Start onClick={ () => setStart(true) }> 
                 <span>Praticar React </span>
                 <img src="./assets/next.png" alt="next"/> 
             </Start>
