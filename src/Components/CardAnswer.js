@@ -1,5 +1,6 @@
 import Topbar from "./Topbar";
 import react from "react";
+import { deck } from "./Deck";
 
 import {     
     CardContainer,
@@ -12,6 +13,10 @@ import {
 } from "./StyledCard"
 
 export default function CardAnswer() {
+
+    const flashcardAnswer = deck.filter( (card) => card.id === 1)
+    console.log(flashcardAnswer);
+
     return(
         <>
         <Topbar />
@@ -23,7 +28,9 @@ export default function CardAnswer() {
                 </CardCaunter>
 
                 <CardText>
-                    ijdijdiiijdiujdijdijidjidjididjijdijdijdijdidijdijdijdijdijdi
+                    {
+                        flashcardAnswer.map( (flashcardAnswer, index) => <p key={index}> {flashcardAnswer.answer} </p>)
+                    }
                 </CardText>
 
                 <Footer>
