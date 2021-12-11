@@ -15,6 +15,8 @@ export default function CardQuestion({ start, setStart}) {
     //const [start, setStart] = useState(false);
     //fazer filter
 
+    const flashcardQuestion = deck.filter( (card) => card.id === 1)
+    console.log(flashcardQuestion);
 
     return(
         <>
@@ -26,7 +28,7 @@ export default function CardQuestion({ start, setStart}) {
                     </CardCaunter>
 
                     <CardText>
-                        {deck.map( (deck, index) => <p key={index} > {deck.question} </p>) }
+                        {flashcardQuestion.map( (flashcardQuestion, index) => <p key={index} > {flashcardQuestion.question} </p>) }
                     </CardText>
 
                     <Footer onClick={(e) => console.log(e)} >
