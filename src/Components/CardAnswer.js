@@ -15,7 +15,13 @@ import {
 export default function CardAnswer() {
 
     const flashcardAnswer = deck.filter( (card) => card.id === 1)
-    console.log(flashcardAnswer);
+
+    function click(e) {
+        if(e.target.id === '1' ){
+            alert('ue, né que deu certo')
+        }
+        console.log(e)
+    }
 
     return(
         <>
@@ -24,18 +30,20 @@ export default function CardAnswer() {
         <CardContainer>
             <FlashCard>
                 <CardCaunter>
-                    <span>1/8</span>
+                    <span>1/{deck.length}</span>
                 </CardCaunter>
 
                 <CardText>
-                    {
-                        flashcardAnswer.map( (flashcardAnswer, index) => <p key={index}> {flashcardAnswer.answer} </p>)
-                    }
+                    {flashcardAnswer.map( (flashcardAnswer, index) => <p key={index}> {flashcardAnswer.answer} </p>)}
                 </CardText>
 
                 <Footer>
                     <Options>
-                        <Option onClick={(e) => console.log(e)} id="1" borderColor='#000000' >Aprendi <br/> agora</Option>
+                        <Option 
+                            onClick={click} 
+                            id="1" 
+                            borderColor='#000000'
+                        >Aprendi <br/> agora </Option>
                         <Option id="2" borderColor='#F74848' >Não <br/> lembrei</Option>
                         <Option id="3" borderColor='#62DB38' >Lembrei <br/> com <br/> esforço</Option>
                         <Option id="4" borderColor='#FFEF61' >Zap!</Option>

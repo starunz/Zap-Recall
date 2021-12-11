@@ -13,10 +13,8 @@ import {
 
 export default function CardQuestion({ start, setStart}) {
     //const [start, setStart] = useState(false);
-    //fazer filter
 
     const flashcardQuestion = deck.filter( (card) => card.id === 1)
-    console.log(flashcardQuestion);
 
     return(
         <>
@@ -24,14 +22,14 @@ export default function CardQuestion({ start, setStart}) {
             <CardContainer>
                 <FlashCard>
                     <CardCaunter>
-                        <span>1/8</span>
+                        <span>1/{deck.length}</span>
                     </CardCaunter>
 
                     <CardText>
                         {flashcardQuestion.map( (flashcardQuestion, index) => <p key={index} > {flashcardQuestion.question} </p>) }
                     </CardText>
 
-                    <Footer onClick={(e) => console.log(e)} >
+                    <Footer>
                         <img onClick={() => setStart(true)}  src="./assets/turn.png" alt="turn" />
                     </Footer>
                 </FlashCard>
