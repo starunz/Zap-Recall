@@ -1,14 +1,16 @@
 import styled from "styled-components";
 import { useState } from "react";
 
-import Topbar from "./Topbar";
+import Card from "./Card";
 
 
 export default function HomeScreen() {
     const [start, setStart] = useState(false);
+    console.clear()
+    console.log(setStart)
 
     return (
-        start ? <Topbar /> : 
+        start ? <Card/> : 
         <Container>
             <img src="./assets/logo.png" alt="logo"/>
             <Start onClick={ () => setStart(true) }> 
