@@ -1,5 +1,4 @@
 import Topbar from "./Topbar";
-import { useState } from "react";
 import { deck } from "./Deck";
 import NextFlashcard from "./NextFlashcard";
 

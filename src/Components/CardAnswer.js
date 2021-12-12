@@ -13,7 +13,7 @@ import {
 
 import OptionsAnswers from "./OptionsAnswers";
 
-export default function CardAnswer({mudarCor, setMudarCor, mudarSombra, setMudarSombra, mudarId, setMudarId, setStart, start}) {
+export default function CardAnswer({mudarCor, setMudarCor, mudarSombra, setMudarSombra, mudarId, setMudarId, setStart, start, guardar, setGuardar}) {
 //const [...inicio, true]
 
     const [sumir, setSumir] = useState(false);
@@ -39,7 +39,7 @@ export default function CardAnswer({mudarCor, setMudarCor, mudarSombra, setMudar
                     { sumir ? 
                     <NextFlashcard mudarId={mudarId} setMudarId={setMudarId} setStart={setStart} start={start}/>
                     : 
-                    <OptionsAnswers  setMudarCor={setMudarCor} setMudarSombra={setMudarSombra} setSumir={setSumir}/>
+                    <OptionsAnswers  setMudarCor={setMudarCor} setMudarSombra={setMudarSombra} setSumir={setSumir} guardar={guardar} setGuardar={setGuardar} />
                     }
                 </Footer>
 

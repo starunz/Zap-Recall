@@ -8,6 +8,7 @@ export default function NextFlashcard({start ,setStart,mudarId,setMudarId}) {
         }
 
     }
+    
     return(
         <>
             <img onClick={trocarCard}  src="./assets/turn.png" alt="turn" />
