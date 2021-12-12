@@ -1,6 +1,7 @@
 import Topbar from "./Topbar";
 import { useState} from "react";
 import { deck } from "./Deck";
+import NextFlashcard from "./NextFlashcard";
 
 import {     
     CardContainer,
@@ -8,16 +9,18 @@ import {
     CardCaunter,
     CardText,
     Footer,
-    Options,
-    Option
 } from "./StyledCard"
 
 import OptionsAnswers from "./OptionsAnswers";
 
-export default function CardAnswer({mudarCor, setMudarCor, mudarSombra, setMudarSombra}) {
+export default function CardAnswer({mudarCor, setMudarCor, mudarSombra, setMudarSombra, mudarId, setMudarId, setStart, start}) {
 //const [...inicio, true]
 
-    const flashcardAnswer = deck.filter( (answer) => answer.id === 1)
+    const [sumir, setSumir] = useState(false);
+
+    const flashcardAnswer = deck.filter( (answer) => answer.id === mudarId)
+
+
 
     return(
         <>
@@ -25,7 +28,7 @@ export default function CardAnswer({mudarCor, setMudarCor, mudarSombra, setMudar
         <CardContainer>
             <FlashCard borderColor={mudarCor} shadowColor={mudarSombra} >
                 <CardCaunter>
-                    <span>1/{deck.length}</span>
+                    <span>{mudarId}/{deck.length}</span>
                 </CardCaunter>
 
                 <CardText>
@@ -33,7 +36,11 @@ export default function CardAnswer({mudarCor, setMudarCor, mudarSombra, setMudar
                 </CardText>
 
                 <Footer>
-                    <OptionsAnswers  setMudarCor={setMudarCor} setMudarSombra={setMudarSombra}/>
+                    { sumir ? 
+                    <NextFlashcard mudarId={mudarId} setMudarId={setMudarId} setStart={setStart} start={start}/>
+                    : 
+                    <OptionsAnswers  setMudarCor={setMudarCor} setMudarSombra={setMudarSombra} setSumir={setSumir}/>
+                    }
                 </Footer>
 
             </FlashCard>

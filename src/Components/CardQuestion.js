@@ -1,6 +1,7 @@
 import Topbar from "./Topbar";
 import { useState } from "react";
 import { deck } from "./Deck";
+import NextFlashcard from "./NextFlashcard";
 
 import {     
     CardContainer,
@@ -11,10 +12,9 @@ import {
 } from "./StyledCard"
 
 
-export default function CardQuestion({ start, setStart, mudarCor, mudarSombra}) {
-    //const [start, setStart] = useState(false);
+export default function CardQuestion({setStart, start ,mudarCor, mudarSombra, mudarId, setMudarId}) {
 
-    const flashcardQuestion = deck.filter( (question) => question.id === 1)
+    const flashcardQuestion = deck.filter( (question) => question.id === mudarId)
 
     return(
         <>
@@ -22,7 +22,7 @@ export default function CardQuestion({ start, setStart, mudarCor, mudarSombra}) 
             <CardContainer>
                 <FlashCard borderColor={mudarCor} shadowColor={mudarSombra}>
                     <CardCaunter>
-                        <span>1/{deck.length}</span>
+                        <span>{mudarId}/{deck.length}</span>
                     </CardCaunter>
 
                     <CardText>
@@ -30,7 +30,7 @@ export default function CardQuestion({ start, setStart, mudarCor, mudarSombra}) 
                     </CardText>
 
                     <Footer>
-                        <img onClick={() => setStart(true)}  src="./assets/turn.png" alt="turn" />
+                        <NextFlashcard setStart={setStart} start={start}/>
                     </Footer>
                 </FlashCard>
 

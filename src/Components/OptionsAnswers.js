@@ -1,24 +1,28 @@
 import { Options, Option} from "./StyledCard"
 
-export default function OptionsAnswers({setMudarCor, setMudarSombra}) {
+export default function OptionsAnswers({setMudarCor, setMudarSombra, setSumir}) {
 
     function click(e) {
         switch (e.target.id) {
             case '1':
-                setMudarCor('#000000')
-                setMudarSombra('rgba(0, 0, 0, 0.12)')
+                setMudarCor('#000000');
+                setMudarSombra('rgba(0, 0, 0, 0.12)');
+                setSumir(true);
                 break;
             case '2':
-                setMudarCor('#F74848')
-                setMudarSombra('rgba(246, 72, 72, 0.10)')
+                setMudarCor('#F74848');
+                setMudarSombra('rgba(246, 72, 72, 0.10)');
+                setSumir(true);
                 break;
             case '3':
-                setMudarCor('#62DB38')
-                setMudarSombra('rgba(98, 219, 56, 0.20)')
+                setMudarCor('#62DB38');
+                setMudarSombra('rgba(98, 219, 56, 0.20)');
+                setSumir(true);
                 break;    
             case '4':
-                setMudarCor('#FFEF61')
-                setMudarSombra('rgba(255, 239, 97, 0.50)')
+                setMudarCor('#FFEF61');
+                setMudarSombra('rgba(255, 239, 97, 0.50)');
+                setSumir(true);
                 break;
             default:
                 break;
@@ -38,7 +42,7 @@ export default function OptionsAnswers({setMudarCor, setMudarSombra}) {
             <Option onClick={click} id="3" borderColor='#62DB38' >
                 Lembrei <br/> com <br/> esforço
             </Option>
-            
+
             <Option onClick={click} id="4" borderColor='#FFEF61' >
                 Zap!
             </Option>
