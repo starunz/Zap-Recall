@@ -11,22 +11,22 @@ import {
 } from "./StyledCard"
 
 
-export default function CardQuestion({ start, setStart}) {
+export default function CardQuestion({ start, setStart, mudarCor, mudarSombra}) {
     //const [start, setStart] = useState(false);
 
-    const flashcardQuestion = deck.filter( (card) => card.id === 1)
+    const flashcardQuestion = deck.filter( (question) => question.id === 1)
 
     return(
         <>
             <Topbar />
             <CardContainer>
-                <FlashCard>
+                <FlashCard borderColor={mudarCor} shadowColor={mudarSombra}>
                     <CardCaunter>
                         <span>1/{deck.length}</span>
                     </CardCaunter>
 
                     <CardText>
-                        {flashcardQuestion.map( (flashcardQuestion, index) => <p key={index} > {flashcardQuestion.question} </p>) }
+                        {flashcardQuestion.map( (flashcard, index) => <p key={index} > {flashcard.question} </p>) }
                     </CardText>
 
                     <Footer>
