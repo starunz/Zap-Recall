@@ -19,9 +19,9 @@ export default function CardAnswer({hidden, setHidden ,colorChange, setColorChan
         <>
         <Topbar />
         <CardContainer>
-            <FlashCard borderColor={colorChange} shadowColor={changeShadow} >
+            <FlashCard borderColor={colorChange} shadowColor={changeShadow} data-identifier="flashcard">
                 <CardCaunter>
-                   <h1>{flashcardAnswer[0].question}</h1> <span>{changeId}/{deckReact.length}</span>
+                   <h1>{flashcardAnswer[0].question}</h1> <span data-identifier="counter">{changeId}/{deckReact.length}</span>
                 </CardCaunter>
 
                 <CardText>

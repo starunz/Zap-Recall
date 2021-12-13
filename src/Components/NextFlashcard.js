@@ -21,7 +21,7 @@ export default function NextFlashcard({flashcardExchange, setFlashcardExchange, 
 
     return(
         <>
-            <img onClick={changeStates}  src="./assets/turn.png" alt="turn" />
+            <img onClick={changeStates}  src="./assets/turn.png" alt="turn" data-identifier="arrow"/>
         </>
     );
 }

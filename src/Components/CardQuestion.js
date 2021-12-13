@@ -19,9 +19,9 @@ export default function CardQuestion({setFlashcardExchange, flashcardExchange, c
         <>
             <Topbar />
             <CardContainer>
-                <FlashCard borderColor={colorChange} shadowColor={changeShadow}>
+                <FlashCard borderColor={colorChange} shadowColor={changeShadow} data-identifier="flashcard">
                     <CardCaunter>
-                        <span>{changeId}/{deckReact.length}</span>
+                        <span data-identifier="counter">{changeId}/{deckReact.length}</span>
                     </CardCaunter>
 
                     <CardText>
