@@ -1,5 +1,5 @@
 import Topbar from "./Topbar";
-import { CardContainer, Failure } from "./StyledCard";
+import { CardContainer, ContainerFailure ,Failure } from "./StyledCard";
 
 export default function Erro() {
     
@@ -7,10 +7,14 @@ export default function Erro() {
         <>
             <Topbar />
             <CardContainer>
-                <Failure>
-                    <h1>Putz.. <img src='../assets/sad.png' alt='sad' /></h1>
+                <ContainerFailure>
+                    <Failure>
+                        <h1>Putz... </h1>
+                        <img src='../assets/sad.png' alt='sad' />
+                    </Failure>
+
                     <p>Você esqueceu alguns flashcards... <br/> Não desanime! Na próxima você consegue!</p>
-                </Failure>
+                </ContainerFailure>
             </CardContainer>
         </>
     );

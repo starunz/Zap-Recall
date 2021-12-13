@@ -31,13 +31,11 @@ const FlashCard = styled.div `
 
 const CardCaunter = styled.div `
     width: 100%;
-    height: 40px;
 
     display: flex;
     justify-content: center ;
     align-items: center;
 
-    background-color: violet;
 
     position: relative;
 
@@ -53,6 +51,16 @@ const CardCaunter = styled.div `
         line-height: 21px;
         letter-spacing: 0.1em;
     }
+
+    h1 {
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 14px;
+        margin-top: 15px;
+    }
+
 `
 const CardText = styled.div ` 
     width: 100%;
@@ -78,11 +86,6 @@ const CardText = styled.div `
 `
 const Footer = styled.div `
     width: 100%;
-
-    //display: flex;
-    //justify-content: space-between;
-
-    //background-color: tomato;
 
     position: relative;
 
@@ -129,7 +132,7 @@ const Option = styled.button `
     }
 `
 
-const Sucess = styled.div `
+const ContainerSucess = styled.div `
     width: 100%;
     height: 100%;
 
@@ -140,14 +143,6 @@ const Sucess = styled.div `
 
     margin-top: 300px;
 
-    h1{
-        font-family: 'Roboto', sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 36px;
-        line-height: 42px;
-    }
-
     p {
         font-family: 'Roboto', sans-serif;
         font-style: normal;
@@ -156,8 +151,27 @@ const Sucess = styled.div `
         line-height: 26px;
     }
 `
+const Sucess = styled.div`
+    width: 100%;
 
-const Failure = styled.div `
+    display: flex;
+    justify-content: center;
+    align-items:center;
+
+    margin-bottom: 15px;
+
+    h1{
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 42px;
+        margin-right: 10px;
+    }
+
+`
+
+const ContainerFailure = styled.div `
     width: 100%;
     height: 100%;
 
@@ -185,6 +199,25 @@ const Failure = styled.div `
         text-align: center;
     }
 `
+const Failure = styled.div`
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items:center;
+
+    margin-bottom: 15px;
+
+    h1{
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 42px;
+        margin-right: 10px;
+    }
+
+`
 export {
     CardContainer,
     FlashCard,
@@ -193,6 +226,8 @@ export {
     Footer,
     Options,
     Option,
+    ContainerSucess,
     Sucess,
-    Failure,
+    ContainerFailure,
+    Failure
 }

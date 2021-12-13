@@ -1,4 +1,4 @@
-import { Sucess, CardContainer} from './StyledCard'
+import { ContainerSucess, Sucess, CardContainer} from './StyledCard'
 import Topbar from './Topbar'
 
 export default function Sucesso() {
@@ -7,10 +7,14 @@ export default function Sucesso() {
             <Topbar />
             <CardContainer>
 
-                <Sucess>
-                    <h1>PARABÉNS! <img src='../assets/party.png' alt='party' /> </h1> 
+                <ContainerSucess>
+                    <Sucess>
+                        <h1>PARABÉNS!</h1> 
+                        <img src='../assets/party.png' alt='party' /> 
+                    </Sucess>
+                    
                     <p>Você não esqueceu de nenhum flashcard!</p>
-                </Sucess>
+                </ContainerSucess>
             </CardContainer>
         </>
     )
