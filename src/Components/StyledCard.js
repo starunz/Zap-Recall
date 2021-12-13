@@ -28,7 +28,6 @@ const FlashCard = styled.div `
     border: 3px solid ${(props) => props.borderColor};
     border-radius: 12px;
 `
-
 const CardCaunter = styled.div `
     width: 100%;
 

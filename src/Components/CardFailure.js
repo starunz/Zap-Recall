@@ -1,7 +1,7 @@
 import Topbar from "./Topbar";
 import { CardContainer, ContainerFailure ,Failure } from "./StyledCard";
 
-export default function Erro() {
+export default function CardFailure() {
     
     return(
         <>

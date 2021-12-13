@@ -2,7 +2,7 @@ import Topbar from "./Topbar";
 import { useState} from "react";
 import { deck } from "./Deck";
 import NextFlashcard from "./NextFlashcard";
-import CardFinal from "./CardFinal";
+import RenderResultCard from "./RenderResultCard";
 
 import {     
     CardContainer,
@@ -15,14 +15,13 @@ import {
 import OptionsAnswers from "./OptionsAnswers";
 
 export default function CardAnswer({mudarCor, setMudarCor, mudarSombra, setMudarSombra, mudarId, setMudarId, setStart, start, guardar, setGuardar, final, setFinal,finalTrocar, setFinalTrocar}) {
-    console.log(guardar)
 
     const [sumir, setSumir] = useState(false);
 
     const flashcardAnswer = deck.filter( (answer) => answer.id === mudarId)
 
     return(
-        final ? <CardFinal guardar={guardar} finalTrocar={finalTrocar} setFinalTrocar={setFinalTrocar}/> :
+        final ? <RenderResultCard guardar={guardar} finalTrocar={finalTrocar} setFinalTrocar={setFinalTrocar}/> :
         <>
         <Topbar />
         <CardContainer>
