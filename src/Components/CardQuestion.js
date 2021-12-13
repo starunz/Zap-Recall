@@ -11,7 +11,7 @@ import {
 } from "./StyledCard"
 
 
-export default function CardQuestion({setStart, start ,mudarCor, mudarSombra, mudarId, setMudarId}) {
+export default function CardQuestion({setStart, start ,mudarCor, mudarSombra, mudarId, setMudarId, guardar, setGuardar, final, setFinal,finalTrocar, setFinalTrocar}) {
 
     const flashcardQuestion = deck.filter( (question) => question.id === mudarId)
 
@@ -29,7 +29,7 @@ export default function CardQuestion({setStart, start ,mudarCor, mudarSombra, mu
                     </CardText>
 
                     <Footer>
-                        <NextFlashcard setStart={setStart} start={start}/>
+                        <NextFlashcard setStart={setStart} start={start} guardar={guardar} setGuardar={setGuardar} final={final} setFinal={setFinal} finalTrocar={finalTrocar}setFinalTrocar={setFinalTrocar}/>
                     </Footer>
                 </FlashCard>
 

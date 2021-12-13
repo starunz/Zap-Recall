@@ -6,8 +6,7 @@ import Card from "./Card";
 
 export default function HomeScreen() {
     const [start, setStart] = useState(false);
-    console.clear()
-    console.log(setStart)
+
 
     return (
         start ? <Card/> : 

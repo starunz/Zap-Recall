@@ -2,6 +2,7 @@ import Topbar from "./Topbar";
 import { useState} from "react";
 import { deck } from "./Deck";
 import NextFlashcard from "./NextFlashcard";
+import CardFinal from "./CardFinal";
 
 import {     
     CardContainer,
@@ -13,16 +14,15 @@ import {
 
 import OptionsAnswers from "./OptionsAnswers";
 
-export default function CardAnswer({mudarCor, setMudarCor, mudarSombra, setMudarSombra, mudarId, setMudarId, setStart, start, guardar, setGuardar}) {
-//const [...inicio, true]
+export default function CardAnswer({mudarCor, setMudarCor, mudarSombra, setMudarSombra, mudarId, setMudarId, setStart, start, guardar, setGuardar, final, setFinal,finalTrocar, setFinalTrocar}) {
+    console.log(guardar)
 
     const [sumir, setSumir] = useState(false);
 
     const flashcardAnswer = deck.filter( (answer) => answer.id === mudarId)
 
-
-
     return(
+        final ? <CardFinal guardar={guardar} finalTrocar={finalTrocar} setFinalTrocar={setFinalTrocar}/> :
         <>
         <Topbar />
         <CardContainer>
@@ -37,7 +37,18 @@ export default function CardAnswer({mudarCor, setMudarCor, mudarSombra, setMudar
 
                 <Footer>
                     { sumir ? 
-                    <NextFlashcard mudarId={mudarId} setMudarId={setMudarId} setStart={setStart} start={start}/>
+                    <NextFlashcard 
+                        mudarId={mudarId} 
+                        setMudarId={setMudarId} 
+                        setStart={setStart} 
+                        start={start} 
+                        guardar={guardar} 
+                        setGuardar={setGuardar}
+                        final={final}
+                        setFinal={setFinal}
+                        finalTrocar={finalTrocar}
+                        setFinalTrocar={setFinalTrocar}
+                    />
                     : 
                     <OptionsAnswers  setMudarCor={setMudarCor} setMudarSombra={setMudarSombra} setSumir={setSumir} guardar={guardar} setGuardar={setGuardar} />
                     }
@@ -46,6 +57,6 @@ export default function CardAnswer({mudarCor, setMudarCor, mudarSombra, setMudar
             </FlashCard>
 
         </CardContainer>
-        </>
+        </> 
     );
 }

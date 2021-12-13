@@ -9,6 +9,8 @@ export default function Card() {
     const [mudarSombra, setMudarSombra] = useState('rgba(0, 0, 0, 0.12)');
     const [mudarId, setMudarId] = useState(1);
     const [guardar, setGuardar] = useState([]);
+    const [final, setFinal] = useState(false);
+    const [finalTrocar, setFinalTrocar] = useState(false)
     console.log(guardar);
 
 
@@ -25,6 +27,10 @@ export default function Card() {
             setMudarId={setMudarId}
             guardar={guardar}
             setGuardar={setGuardar}
+            final={final}
+            setFinal={setFinal}
+            finalTrocar={finalTrocar}
+            setFinalTrocar={setFinalTrocar}
         /> 
         : 
         <CardQuestion 
@@ -34,6 +40,12 @@ export default function Card() {
             mudarSombra={mudarSombra} 
             mudarId={mudarId} 
             setMudarId={setMudarId} 
+            guardar={guardar}
+            setGuardar={setGuardar}
+            final={final}
+            setFinal={setFinal}
+            finalTrocar={finalTrocar}
+            setFinalTrocar={setFinalTrocar}
         />
     );
 }
