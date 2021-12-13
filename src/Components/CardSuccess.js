@@ -1,7 +1,8 @@
-import { ContainerSucess, Sucess, CardContainer} from './StyledCard'
 import Topbar from './Topbar'
+import { ContainerSucess, Sucess, CardContainer} from './StyledCard'
 
 export default function CardSuccess() {
+    
     return(
         <> 
             <Topbar />

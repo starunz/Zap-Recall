@@ -1,10 +1,9 @@
-
 import CardSuccess from "./CardSuccess";
 import CardFailure from "./CardFailure";
 
-export default function RenderResultCard({finalTrocar}) {
-
+export default function RenderResultCard({changeResult}) {
+    
     return(
-       finalTrocar ? <CardFailure /> : <CardSuccess />
+       changeResult ? <CardFailure /> : <CardSuccess />
     );
 }

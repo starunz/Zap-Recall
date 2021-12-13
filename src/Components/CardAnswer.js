@@ -1,8 +1,7 @@
 import Topbar from "./Topbar";
-import { useState} from "react";
-import { deck } from "./Deck";
 import NextFlashcard from "./NextFlashcard";
-import RenderResultCard from "./RenderResultCard";
+import OptionsAnswers from "./OptionsAnswers";
+import { deckReact } from "./Deck";
 
 import {     
     CardContainer,
@@ -12,22 +11,17 @@ import {
     Footer,
 } from "./StyledCard"
 
-import OptionsAnswers from "./OptionsAnswers";
+export default function CardAnswer({hidden, setHidden ,colorChange, setColorChange, changeShadow, setChangeShadow, changeId, setChangeId, flashcardExchange, setFlashcardExchange, savedAnswer, setSavedAnswer, endGame, setEndGame,changeResult, setChangeResult}) {
 
-export default function CardAnswer({colorChange, setColorChange, changeShadow, setChangeShadow, changeId, setChangeId, flashcardExchange, setFlashcardExchange, savedAnswer, setSavedAnswer, endGame, setEndGame,changeResult, setChangeResult}) {
-
-    const [hidden, setHidden] = useState(false);
-
-    const flashcardAnswer = deck.filter( (answer) => answer.id === changeId)
+    const flashcardAnswer = deckReact.filter( (answer) => answer.id === changeId)
 
     return(
-        endGame ? <RenderResultCard savedAnswer={savedAnswer} changeResult={changeResult} setChangeResult={setChangeResult}/> :
         <>
         <Topbar />
         <CardContainer>
             <FlashCard borderColor={colorChange} shadowColor={changeShadow} >
                 <CardCaunter>
-                   <h1>{flashcardAnswer[0].question}</h1> <span>{changeId}/{deck.length}</span>
+                   <h1>{flashcardAnswer[0].question}</h1> <span>{changeId}/{deckReact.length}</span>
                 </CardCaunter>
 
                 <CardText>

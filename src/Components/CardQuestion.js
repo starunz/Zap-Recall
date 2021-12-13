@@ -1,6 +1,6 @@
 import Topbar from "./Topbar";
 import NextFlashcard from "./NextFlashcard";
-import { deck } from "./Deck";
+import { deckReact } from "./Deck";
 
 import {     
     CardContainer,
@@ -11,9 +11,9 @@ import {
 } from "./StyledCard"
 
 
-export default function CardQuestion({setFlashcardExchange, flashcardExchange ,colorChange, changeShadow, changeId, savedAnswer, setSavedAnswer, endGame, setEndGame, changeResult, setChangeResult}) {
+export default function CardQuestion({setFlashcardExchange, flashcardExchange, colorChange, changeShadow, changeId, savedAnswer, setSavedAnswer, endGame, setEndGame, changeResult, setChangeResult}) {
 
-    const flashcardQuestion = deck.filter( (question) => question.id === changeId)
+    const flashcardQuestion = deckReact.filter( (question) => question.id === changeId)
 
     return(
         <>
@@ -21,7 +21,7 @@ export default function CardQuestion({setFlashcardExchange, flashcardExchange ,c
             <CardContainer>
                 <FlashCard borderColor={colorChange} shadowColor={changeShadow}>
                     <CardCaunter>
-                        <span>{changeId}/{deck.length}</span>
+                        <span>{changeId}/{deckReact.length}</span>
                     </CardCaunter>
 
                     <CardText>

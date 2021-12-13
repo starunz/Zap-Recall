@@ -3,7 +3,7 @@ import { Options, Option} from "./StyledCard"
 export default function OptionsAnswers({setColorChange, setChangeShadow, setHidden, savedAnswer, setSavedAnswer}) {
 
     function click(e) {
-        switch (e.target.id) {
+        switch(e.target.id) {
             case '1':
                 setColorChange('#000000');
                 setChangeShadow('rgba(0, 0, 0, 0.12)');

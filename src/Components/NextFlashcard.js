@@ -1,14 +1,14 @@
-import { deck } from "./Deck";
+import { deckReact } from "./Deck";
 
 export default function NextFlashcard({flashcardExchange, setFlashcardExchange, changeId, setChangeId, savedAnswer, setEndGame, setChangeResult}) {
 
     function changeStates() {
         setFlashcardExchange(true);
 
-        if (savedAnswer.length === deck.length) {
+        if(savedAnswer.length === deckReact.length) {
             setEndGame(true);
             
-            if (savedAnswer.includes(false)) {
+            if(savedAnswer.includes(false)) {
                 setChangeResult(true);
             }
         }

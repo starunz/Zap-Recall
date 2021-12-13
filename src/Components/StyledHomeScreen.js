@@ -55,4 +55,4 @@ const Start = styled.button `
 export {
     Container,
     Start
-}
+};

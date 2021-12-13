@@ -1,4 +1,4 @@
-const deck = [
+const deckReact = [
     {
       id: 1,
       question: 'O que é JSX?',
@@ -42,4 +42,4 @@ const deck = [
     },
 ];
 
-export { deck };
+export { deckReact };

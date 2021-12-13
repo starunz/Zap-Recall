@@ -1,6 +1,6 @@
 import { useState } from "react";
-import CardAnswer from "./CardAnswer";
 import CardQuestion from "./CardQuestion";
+import RenderEndGame from "./RenderEndGame";
 
 export default function RenderFlashcard() {
 
@@ -14,7 +14,7 @@ export default function RenderFlashcard() {
 
     return(
         flashcardExchange ? 
-        <CardAnswer 
+        <RenderEndGame
             flashcardExchange={flashcardExchange} 
             setFlashcardExchange={setFlashcardExchange} 
             colorChange={colorChange} 
