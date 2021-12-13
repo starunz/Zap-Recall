@@ -14,14 +14,14 @@ import {
 
 import OptionsAnswers from "./OptionsAnswers";
 
-export default function CardAnswer({colorChange, setColorChange, changeShadow, setChangeShadow, changeId, setChangeId, flashcardExchange, setFlashcardExchange, savedAnswer, setSavedAnswer, endGame, setEndGame,finalTrocar, setFinalTrocar}) {
+export default function CardAnswer({colorChange, setColorChange, changeShadow, setChangeShadow, changeId, setChangeId, flashcardExchange, setFlashcardExchange, savedAnswer, setSavedAnswer, endGame, setEndGame,changeResult, setChangeResult}) {
 
     const [sumir, setSumir] = useState(false);
 
     const flashcardAnswer = deck.filter( (answer) => answer.id === changeId)
 
     return(
-        endGame ? <RenderResultCard savedAnswer={savedAnswer} finalTrocar={finalTrocar} setFinalTrocar={setFinalTrocar}/> :
+        endGame ? <RenderResultCard savedAnswer={savedAnswer} changeResult={changeResult} setChangeResult={setChangeResult}/> :
         <>
         <Topbar />
         <CardContainer>
@@ -45,8 +45,8 @@ export default function CardAnswer({colorChange, setColorChange, changeShadow, s
                         setSavedAnswer={setSavedAnswer}
                         endGame={endGame}
                         setEndGame={setEndGame}
-                        finalTrocar={finalTrocar}
-                        setFinalTrocar={setFinalTrocar}
+                        changeResult={changeResult}
+                        setChangeResult={setChangeResult}
                     />
                     : 
                     <OptionsAnswers  setColorChange={setColorChange} setChangeShadow={setChangeShadow} setSumir={setSumir} savedAnswer={savedAnswer} setSavedAnswer={setSavedAnswer} />

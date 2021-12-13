@@ -10,7 +10,7 @@ export default function RenderFlashcard() {
     const [changeId, setChangeId] = useState(1);
     const [savedAnswer, setSavedAnswer] = useState([]);
     const [endGame, setEndGame] = useState(false);
-    const [finalTrocar, setFinalTrocar] = useState(false)
+    const [changeResult, setChangeResult] = useState(false)
 
 
 
@@ -29,8 +29,8 @@ export default function RenderFlashcard() {
             setSavedAnswer={setSavedAnswer}
             endGame={endGame}
             setEndGame={setEndGame}
-            finalTrocar={finalTrocar}
-            setFinalTrocar={setFinalTrocar}
+            changeResult={changeResult}
+            setChangeResult={setChangeResult}
         /> 
         : 
         <CardQuestion 
@@ -44,8 +44,8 @@ export default function RenderFlashcard() {
             setSavedAnswer={setSavedAnswer}
             endGame={endGame}
             setEndGame={setEndGame}
-            finalTrocar={finalTrocar}
-            setFinalTrocar={setFinalTrocar}
+            changeResult={changeResult}
+            setChangeResult={setChangeResult}
         />
     );
 }

@@ -1,15 +1,15 @@
 import { deck } from "./Deck";
 
-export default function NextFlashcard({flashcardExchange, setFlashcardExchange, changeId, setChangeId, savedAnswer, setEndGame, setFinalTrocar}) {
+export default function NextFlashcard({flashcardExchange, setFlashcardExchange, changeId, setChangeId, savedAnswer, setEndGame, setChangeResult}) {
 
-    function trocarCard() {
+    function changeStates() {
         setFlashcardExchange(true);
 
         if (savedAnswer.length === deck.length) {
             setEndGame(true);
             
             if (savedAnswer.includes(false)) {
-                setFinalTrocar(true);
+                setChangeResult(true);
             }
         }
         else if(flashcardExchange === true){
@@ -21,7 +21,7 @@ export default function NextFlashcard({flashcardExchange, setFlashcardExchange, 
 
     return(
         <>
-            <img onClick={trocarCard}  src="./assets/turn.png" alt="turn" />
+            <img onClick={changeStates}  src="./assets/turn.png" alt="turn" />
         </>
     );
 }

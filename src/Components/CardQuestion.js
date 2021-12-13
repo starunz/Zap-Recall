@@ -11,7 +11,7 @@ import {
 } from "./StyledCard"
 
 
-export default function CardQuestion({setFlashcardExchange, flashcardExchange ,colorChange, changeShadow, changeId, savedAnswer, setSavedAnswer, endGame, setEndGame,finalTrocar, setFinalTrocar}) {
+export default function CardQuestion({setFlashcardExchange, flashcardExchange ,colorChange, changeShadow, changeId, savedAnswer, setSavedAnswer, endGame, setEndGame, changeResult, setChangeResult}) {
 
     const flashcardQuestion = deck.filter( (question) => question.id === changeId)
 
@@ -29,7 +29,7 @@ export default function CardQuestion({setFlashcardExchange, flashcardExchange ,c
                     </CardText>
 
                     <Footer>
-                        <NextFlashcard setFlashcardExchange={setFlashcardExchange} flashcardExchange={flashcardExchange} savedAnswer={savedAnswer} setSavedAnswer={setSavedAnswer} endGame={endGame} setEndGame={setEndGame} finalTrocar={finalTrocar}setFinalTrocar={setFinalTrocar}/>
+                        <NextFlashcard setFlashcardExchange={setFlashcardExchange} flashcardExchange={flashcardExchange} savedAnswer={savedAnswer} setSavedAnswer={setSavedAnswer} endGame={endGame} setEndGame={setEndGame} changeResult={changeResult} setChangeResult={setChangeResult}/>
                     </Footer>
                 </FlashCard>
 
