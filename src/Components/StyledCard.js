@@ -140,7 +140,7 @@ const ContainerSucess = styled.div `
     flex-direction:  column;
     align-items:center;
 
-    margin-top: 300px;
+    margin-top: 400px;
 
     p {
         font-family: 'Roboto', sans-serif;
@@ -176,10 +176,10 @@ const ContainerFailure = styled.div `
 
     display: flex;
     justify-content: center;
-    flex-direction:  column;
+    flex-direction: column;
     align-items:center;
 
-    margin-top: 300px;
+    margin-top: 400px;
 
     h1{
         font-family: 'Roboto', sans-serif;
