@@ -11,12 +11,12 @@ const CardContainer = styled.div `
     box-sizing: border-box;
 `
 const FlashCard = styled.div `
-    width: 27%;
+    width: 392px;
     height: 575.75px;
 
     margin-top: 100px;
 
-    word-break: break-all;
+    word-break: break-word;
 
     display: flex;
     flex-direction: column;
@@ -31,9 +31,11 @@ const FlashCard = styled.div `
 
 const CardCaunter = styled.div `
     width: 100%;
+    height: 40px;
 
     display: flex;
-    justify-content: space-between ;
+    justify-content: center ;
+    align-items: center;
 
     background-color: violet;
 
@@ -53,9 +55,26 @@ const CardCaunter = styled.div `
     }
 `
 const CardText = styled.div ` 
-    width: 50%;
+    width: 100%;
 
-    background-color: turquoise;
+    h1 {
+        text-align:center;
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 33px;
+        margin: 0 20px;
+    }
+    h2 {
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        margin: 0 20px;
+    }
 `
 const Footer = styled.div `
     width: 100%;

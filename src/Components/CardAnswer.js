@@ -28,11 +28,11 @@ export default function CardAnswer({mudarCor, setMudarCor, mudarSombra, setMudar
         <CardContainer>
             <FlashCard borderColor={mudarCor} shadowColor={mudarSombra} >
                 <CardCaunter>
-                    <span>{mudarId}/{deck.length}</span>
+                   <p>{flashcardAnswer[0].question}</p><span>{mudarId}/{deck.length}</span>
                 </CardCaunter>
 
                 <CardText>
-                    {flashcardAnswer.map( (flashcard, index) => <p key={index}> {flashcard.answer} </p>)}
+                    {flashcardAnswer.map( (flashcard, index) => <h2 key={index}> {flashcard.answer} </h2>)}
                 </CardText>
 
                 <Footer>

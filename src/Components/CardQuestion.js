@@ -25,7 +25,7 @@ export default function CardQuestion({setStart, start ,mudarCor, mudarSombra, mu
                     </CardCaunter>
 
                     <CardText>
-                        {flashcardQuestion.map( (flashcard, index) => <p key={index} > {flashcard.question} </p>) }
+                        {flashcardQuestion.map( (flashcard, index) => <h1 key={index} > {flashcard.question} </h1>) }
                     </CardText>
 
                     <Footer>
