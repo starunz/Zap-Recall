@@ -1,20 +1,20 @@
 import { deck } from "./Deck";
 
-export default function NextFlashcard({start, setStart, mudarId, setMudarId, guardar, setFinal, setFinalTrocar}) {
+export default function NextFlashcard({flashcardExchange, setFlashcardExchange, changeId, setChangeId, savedAnswer, setEndGame, setFinalTrocar}) {
 
     function trocarCard() {
-        setStart(true);
+        setFlashcardExchange(true);
 
-        if (guardar.length === deck.length) {
-            setFinal(true);
+        if (savedAnswer.length === deck.length) {
+            setEndGame(true);
             
-            if (guardar.includes(false)) {
+            if (savedAnswer.includes(false)) {
                 setFinalTrocar(true);
             }
         }
-        else if(start === true){
-            setStart(false);
-            setMudarId(mudarId + 1);
+        else if(flashcardExchange === true){
+            setFlashcardExchange(false);
+            setChangeId(changeId + 1);
             return;
         }
     }

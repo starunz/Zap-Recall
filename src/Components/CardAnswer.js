@@ -14,20 +14,20 @@ import {
 
 import OptionsAnswers from "./OptionsAnswers";
 
-export default function CardAnswer({mudarCor, setMudarCor, mudarSombra, setMudarSombra, mudarId, setMudarId, setStart, start, guardar, setGuardar, final, setFinal,finalTrocar, setFinalTrocar}) {
+export default function CardAnswer({colorChange, setColorChange, changeShadow, setChangeShadow, changeId, setChangeId, flashcardExchange, setFlashcardExchange, savedAnswer, setSavedAnswer, endGame, setEndGame,finalTrocar, setFinalTrocar}) {
 
     const [sumir, setSumir] = useState(false);
 
-    const flashcardAnswer = deck.filter( (answer) => answer.id === mudarId)
+    const flashcardAnswer = deck.filter( (answer) => answer.id === changeId)
 
     return(
-        final ? <RenderResultCard guardar={guardar} finalTrocar={finalTrocar} setFinalTrocar={setFinalTrocar}/> :
+        endGame ? <RenderResultCard savedAnswer={savedAnswer} finalTrocar={finalTrocar} setFinalTrocar={setFinalTrocar}/> :
         <>
         <Topbar />
         <CardContainer>
-            <FlashCard borderColor={mudarCor} shadowColor={mudarSombra} >
+            <FlashCard borderColor={colorChange} shadowColor={changeShadow} >
                 <CardCaunter>
-                   <h1>{flashcardAnswer[0].question}</h1> <span>{mudarId}/{deck.length}</span>
+                   <h1>{flashcardAnswer[0].question}</h1> <span>{changeId}/{deck.length}</span>
                 </CardCaunter>
 
                 <CardText>
@@ -37,19 +37,19 @@ export default function CardAnswer({mudarCor, setMudarCor, mudarSombra, setMudar
                 <Footer>
                     { sumir ? 
                     <NextFlashcard 
-                        mudarId={mudarId} 
-                        setMudarId={setMudarId} 
-                        setStart={setStart} 
-                        start={start} 
-                        guardar={guardar} 
-                        setGuardar={setGuardar}
-                        final={final}
-                        setFinal={setFinal}
+                        changeId={changeId} 
+                        setChangeId={setChangeId} 
+                        flashcardExchange={flashcardExchange} 
+                        setFlashcardExchange={setFlashcardExchange} 
+                        savedAnswer={savedAnswer} 
+                        setSavedAnswer={setSavedAnswer}
+                        endGame={endGame}
+                        setEndGame={setEndGame}
                         finalTrocar={finalTrocar}
                         setFinalTrocar={setFinalTrocar}
                     />
                     : 
-                    <OptionsAnswers  setMudarCor={setMudarCor} setMudarSombra={setMudarSombra} setSumir={setSumir} guardar={guardar} setGuardar={setGuardar} />
+                    <OptionsAnswers  setColorChange={setColorChange} setChangeShadow={setChangeShadow} setSumir={setSumir} savedAnswer={savedAnswer} setSavedAnswer={setSavedAnswer} />
                     }
                 </Footer>
 

@@ -1,10 +1,10 @@
-import Card from "./Card";
+import RenderFlashcard from "./RenderFlashcard";
 import HomeScreen from "./HomeScreen";
 
 
 export default function RenderStartGame({start, setStart}) {
 
     return (
-        start ? <Card/> : <HomeScreen setStart={setStart}/>
+        start ? <RenderFlashcard/> : <HomeScreen setStart={setStart}/>
     );
 }

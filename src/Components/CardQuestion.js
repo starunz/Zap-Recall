@@ -11,17 +11,17 @@ import {
 } from "./StyledCard"
 
 
-export default function CardQuestion({setStart, start ,mudarCor, mudarSombra, mudarId, setMudarId, guardar, setGuardar, final, setFinal,finalTrocar, setFinalTrocar}) {
+export default function CardQuestion({setFlashcardExchange, flashcardExchange ,colorChange, changeShadow, changeId, savedAnswer, setSavedAnswer, endGame, setEndGame,finalTrocar, setFinalTrocar}) {
 
-    const flashcardQuestion = deck.filter( (question) => question.id === mudarId)
+    const flashcardQuestion = deck.filter( (question) => question.id === changeId)
 
     return(
         <>
             <Topbar />
             <CardContainer>
-                <FlashCard borderColor={mudarCor} shadowColor={mudarSombra}>
+                <FlashCard borderColor={colorChange} shadowColor={changeShadow}>
                     <CardCaunter>
-                        <span>{mudarId}/{deck.length}</span>
+                        <span>{changeId}/{deck.length}</span>
                     </CardCaunter>
 
                     <CardText>
@@ -29,7 +29,7 @@ export default function CardQuestion({setStart, start ,mudarCor, mudarSombra, mu
                     </CardText>
 
                     <Footer>
-                        <NextFlashcard setStart={setStart} start={start} guardar={guardar} setGuardar={setGuardar} final={final} setFinal={setFinal} finalTrocar={finalTrocar}setFinalTrocar={setFinalTrocar}/>
+                        <NextFlashcard setFlashcardExchange={setFlashcardExchange} flashcardExchange={flashcardExchange} savedAnswer={savedAnswer} setSavedAnswer={setSavedAnswer} endGame={endGame} setEndGame={setEndGame} finalTrocar={finalTrocar}setFinalTrocar={setFinalTrocar}/>
                     </Footer>
                 </FlashCard>
 

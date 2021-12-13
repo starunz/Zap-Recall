@@ -1,32 +1,32 @@
 import { Options, Option} from "./StyledCard"
 
-export default function OptionsAnswers({setMudarCor, setMudarSombra, setSumir, guardar, setGuardar}) {
+export default function OptionsAnswers({setColorChange, setChangeShadow, setSumir, savedAnswer, setSavedAnswer}) {
 
     function click(e) {
         switch (e.target.id) {
             case '1':
-                setMudarCor('#000000');
-                setMudarSombra('rgba(0, 0, 0, 0.12)');
+                setColorChange('#000000');
+                setChangeShadow('rgba(0, 0, 0, 0.12)');
                 setSumir(true);
-                setGuardar([...guardar, true])
+                setSavedAnswer([...savedAnswer, true])
                 break;
             case '2':
-                setMudarCor('#F74848');
-                setMudarSombra('rgba(246, 72, 72, 0.10)');
+                setColorChange('#F74848');
+                setChangeShadow('rgba(246, 72, 72, 0.10)');
                 setSumir(true);
-                setGuardar([...guardar, false])
+                setSavedAnswer([...savedAnswer, false])
                 break;
             case '3':
-                setMudarCor('#62DB38');
-                setMudarSombra('rgba(98, 219, 56, 0.20)');
+                setColorChange('#62DB38');
+                setChangeShadow('rgba(98, 219, 56, 0.20)');
                 setSumir(true);
-                setGuardar([...guardar, true])
+                setSavedAnswer([...savedAnswer, true])
                 break;    
             case '4':
-                setMudarCor('#FFEF61');
-                setMudarSombra('rgba(255, 239, 97, 0.50)');
+                setColorChange('#FFEF61');
+                setChangeShadow('rgba(255, 239, 97, 0.50)');
                 setSumir(true);
-                setGuardar([...guardar, true])
+                setSavedAnswer([...savedAnswer, true])
                 break;
             default:
                 break;
