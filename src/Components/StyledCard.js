@@ -110,6 +110,62 @@ const Option = styled.button `
     }
 `
 
+const Sucess = styled.div `
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction:  column;
+    align-items:center;
+
+    margin-top: 300px;
+
+    h1{
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 42px;
+    }
+
+    p {
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 26px;
+    }
+`
+
+const Failure = styled.div `
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction:  column;
+    align-items:center;
+
+    margin-top: 300px;
+
+    h1{
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 42px;
+    }
+
+    p {
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 26px;
+        text-align: center;
+    }
+`
 export {
     CardContainer,
     FlashCard,
@@ -118,4 +174,6 @@ export {
     Footer,
     Options,
     Option,
+    Sucess,
+    Failure,
 }

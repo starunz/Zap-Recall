@@ -1,8 +1,17 @@
-export default function Erro({final, setFinal}) {
+import Topbar from "./Topbar";
+import { CardContainer, Failure } from "./StyledCard";
+
+export default function Erro() {
     
     return(
         <>
-            <p>não deu bom</p>
+            <Topbar />
+            <CardContainer>
+                <Failure>
+                    <h1>Putz.. <img src='../assets/sad.png' alt='sad' /></h1>
+                    <p>Você esqueceu alguns flashcards... <br/> Não desanime! Na próxima você consegue!</p>
+                </Failure>
+            </CardContainer>
         </>
     );
 }
