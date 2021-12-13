@@ -16,7 +16,7 @@ import OptionsAnswers from "./OptionsAnswers";
 
 export default function CardAnswer({colorChange, setColorChange, changeShadow, setChangeShadow, changeId, setChangeId, flashcardExchange, setFlashcardExchange, savedAnswer, setSavedAnswer, endGame, setEndGame,changeResult, setChangeResult}) {
 
-    const [sumir, setSumir] = useState(false);
+    const [hidden, setHidden] = useState(false);
 
     const flashcardAnswer = deck.filter( (answer) => answer.id === changeId)
 
@@ -35,7 +35,7 @@ export default function CardAnswer({colorChange, setColorChange, changeShadow, s
                 </CardText>
 
                 <Footer>
-                    { sumir ? 
+                    { hidden ? 
                     <NextFlashcard 
                         changeId={changeId} 
                         setChangeId={setChangeId} 
@@ -49,7 +49,13 @@ export default function CardAnswer({colorChange, setColorChange, changeShadow, s
                         setChangeResult={setChangeResult}
                     />
                     : 
-                    <OptionsAnswers  setColorChange={setColorChange} setChangeShadow={setChangeShadow} setSumir={setSumir} savedAnswer={savedAnswer} setSavedAnswer={setSavedAnswer} />
+                    <OptionsAnswers  
+                        setColorChange={setColorChange} 
+                        setChangeShadow={setChangeShadow} 
+                        setHidden={setHidden} 
+                        savedAnswer={savedAnswer} 
+                        setSavedAnswer={setSavedAnswer} 
+                    />
                     }
                 </Footer>
 

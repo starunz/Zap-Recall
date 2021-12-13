@@ -12,8 +12,6 @@ export default function RenderFlashcard() {
     const [endGame, setEndGame] = useState(false);
     const [changeResult, setChangeResult] = useState(false)
 
-
-
     return(
         flashcardExchange ? 
         <CardAnswer 

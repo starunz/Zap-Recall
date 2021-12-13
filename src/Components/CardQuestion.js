@@ -1,6 +1,6 @@
 import Topbar from "./Topbar";
-import { deck } from "./Deck";
 import NextFlashcard from "./NextFlashcard";
+import { deck } from "./Deck";
 
 import {     
     CardContainer,
@@ -29,7 +29,16 @@ export default function CardQuestion({setFlashcardExchange, flashcardExchange ,c
                     </CardText>
 
                     <Footer>
-                        <NextFlashcard setFlashcardExchange={setFlashcardExchange} flashcardExchange={flashcardExchange} savedAnswer={savedAnswer} setSavedAnswer={setSavedAnswer} endGame={endGame} setEndGame={setEndGame} changeResult={changeResult} setChangeResult={setChangeResult}/>
+                        <NextFlashcard 
+                            flashcardExchange={flashcardExchange} 
+                            setFlashcardExchange={setFlashcardExchange} 
+                            savedAnswer={savedAnswer} 
+                            setSavedAnswer={setSavedAnswer} 
+                            endGame={endGame} 
+                            setEndGame={setEndGame} 
+                            changeResult={changeResult} 
+                            setChangeResult={setChangeResult}
+                        />
                     </Footer>
                 </FlashCard>
 
