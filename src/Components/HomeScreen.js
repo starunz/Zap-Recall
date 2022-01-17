@@ -6,7 +6,7 @@ export default function HomeScreen({setStart}) {
         <Container>
             <img src="./assets/logo.png" alt="logo"/>
             <Start onClick={ () => setStart(true) } data-identifier="start-zap-recall"> 
-                <span>Praticar React </span>
+                <span>Praticar NPM </span>
                 <img src="./assets/next.png" alt="next"/> 
             </Start>
         </Container>

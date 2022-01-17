@@ -38,6 +38,8 @@ const CardCaunter = styled.div `
 
     position: relative;
 
+    word-break: break-word;
+
     span {
         position: absolute;
         right:10px ;
@@ -58,6 +60,7 @@ const CardCaunter = styled.div `
         font-size: 12px;
         line-height: 14px;
         margin-top: 15px;
+        word-break: break-word;
     }
 
 `
